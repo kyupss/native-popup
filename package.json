@@ -33,5 +33,8 @@
     "rimraf": "3.0.2",
     "standard-version": "^7.1.0",
     "typescript": "3.8.3"
+  },
+  "dependencies": {
+    "@kyupss/native-popup": "^1.0.2"
   }
 }

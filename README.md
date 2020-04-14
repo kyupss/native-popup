@@ -1,4 +1,4 @@
-# react-native-popup-ui
+# @kyupss/native-popup
 
 A simple and fully customizable React Native component that implements a popup UI.
 
@@ -23,65 +23,64 @@ A simple and fully customizable React Native component that implements a popup U
 
 If using yarn:
 
-```
-yarn add popup-ui
+```sh
+yarn add @kyupss/native-popup
 ```
 
 If using npm:
 
-```
-npm i popup-ui
+```sh
+npm i @kyupss/native-popup
 ```
 
 ## Usage
 
-```
+```js
 import { View, TouchableOpacity, Text } from 'react-native'
-import { Root, Popup } from 'popup-ui'
+import { Root, Popup } from '@kyupss/native-popup'
 ```
 
 Simply declare the method in your event `Popup.show({...})` in its component.
 
-```
+```jsx
 <Root>
-    <View>
-        <TouchableOpacity
-            onPress={() =>
-              Popup.show({
-                type: 'Success',
-                title: 'Upload complete',
-                button: false,
-                textBody: 'Congrats! Your upload successfully done',
-                buttontext: 'Ok',
-                callback: () => Popup.hide()
-              })
-            }
-        >
-            <Text>Open Popup</Text>
-        </TouchableOpacity>
-    </View>
+  <View>
+    <TouchableOpacity
+      onPress={() =>
+        Popup.show({
+          type: 'Success',
+          title: 'Upload complete',
+          button: false,
+          textBody: 'Congrats! Your upload successfully done',
+          buttontext: 'Ok',
+          callback: () => Popup.hide()
+        })
+      }
+    >
+      <Text>Open Popup</Text>
+    </TouchableOpacity>
+  </View>
 </Root>
 ```
 
 You can also use the `Toast` component.
 
-```
-    // Is necessary make the import to Toast (import { Root, Toast } from 'popup-ui')
-    <Root>
-        <View>
-            <TouchableOpacity
-                onPress={() => 
-                    Toast.show({
-                        title: 'User created',
-                        text: 'Your user was successfully created, use the app now.',
-                        color: '#2ecc71'
-                    })
-                }
-            >
-                <Text>Call Toast</Text>
-            </TouchableOpacity>
-        </View>
-    </Root>
+```jsx
+// Is necessary make the import to Toast (import { Root, Toast } from 'popup-ui')
+<Root>
+  <View>
+    <TouchableOpacity
+      onPress={() => 
+        Toast.show({
+        title: 'User created',
+        text: 'Your user was successfully created, use the app now.',
+        color: '#2ecc71'
+      })}
+    >
+    <Text>Call Toast</Text>
+    </TouchableOpacity>
+  </View>
+</Root>
 ```
 
 ### Popup Type Usage
@@ -90,7 +89,7 @@ Popup contains a type-customization scheme `Type` props.
 
 Example success usage:
 
-```
+```js
 Popup.show({
     type: 'Success'
 })
@@ -98,7 +97,7 @@ Popup.show({
 
 Example warning usage:
 
-```
+```js
 Popup.show({
     type: 'Warning'
 })
@@ -106,7 +105,7 @@ Popup.show({
 
 Example error usage:
 
-```
+```js
 Popup.show({
     type: 'Danger'
 })
@@ -118,7 +117,7 @@ Popup contains a customization in `Background` props.
 
 Example usage:
 
-```
+```js
 Popup.show({
     background: 'red'
 })
@@ -130,7 +129,7 @@ Popup contains a callback function in button popup `Callback` props.
 
 Example usage:
 
-```
+```js
 Popup.show({
     callback: Popup.hide()
 })

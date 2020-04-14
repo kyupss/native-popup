@@ -940,6 +940,11 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
+"@kyupss/native-popup@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@kyupss/native-popup/-/native-popup-1.0.2.tgz#4da2ef1845f6da160874860ba9e5b366265ba5f3"
+  integrity sha512-ZqCLWLhbnj+onWx2t2wTXHNrCXB1KJFwYUca2DKG6meS/bzcPo5WnA6wK3XYwU4slYlWidqZAXkqb3I8+BiDEA==
+
 "@react-native-community/cli-debugger-ui@^4.6.3":
   version "4.6.3"
   resolved "https://registry.yarnpkg.com/@react-native-community/cli-debugger-ui/-/cli-debugger-ui-4.6.3.tgz#5e93bf170a092a011f1bb0e19886f94265a4ce97"
