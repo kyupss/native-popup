@@ -168,16 +168,6 @@ Popup.show({
 
 Pull requests are always welcome! Feel free to open a new GitHub issue for any changes that can be made.
 
-## Author
-
-Rafael Augusto | [https://linkedin.com/in/rafaelaugustos/](https://linkedin.com/in/rafaelaugustos/)
-
-## Roadmap
-- <s>Toast</s>
-- Alert/Confirm
-- Create a function to close toast with gesture
-
-
 ## License
 
 [MIT](./LICENSE)

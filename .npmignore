@@ -30,3 +30,4 @@ renovate.json
 .prettierrc
 publish.sh
 assets
+README.md
