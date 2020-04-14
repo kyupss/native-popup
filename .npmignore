@@ -1,0 +1,32 @@
+# Logs
+*.log
+npm-debug.log
+
+# Dependency directory
+node_modules
+
+# Examples (If applicable to your project)
+sample
+
+# source
+lib
+tests
+sample
+index.ts
+package-lock.json
+yarn.lock
+tsconfig.json
+.prettierrc
+docs
+website
+
+# misc
+.commitlintrc.json
+.release-it.json
+.eslintignore
+.eslintrc.js
+renovate.json
+.prettierignore
+.prettierrc
+publish.sh
+assets

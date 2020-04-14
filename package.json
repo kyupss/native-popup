@@ -1,0 +1,36 @@
+{
+  "name": "@kyupss/native-popup",
+  "version": "1.0.0",
+  "author": "Kyupss TM",
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc -p tsconfig.json",
+    "release": "standard-version",
+    "patch": "npm run release -- --release-as patch",
+    "minor": "npm run release -- --release-as minor",
+    "major": "npm run release -- --release-as major",
+    "deploy": "npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyupss/native-popup.git"
+  },
+  "keywords": [
+    "react",
+    "react native",
+    "mobile",
+    "ui",
+    "popup"
+  ],
+  "peerDependencies": {
+    "react-native": ">=0.50.0"
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "react": "16.13.1",
+    "react-native": "0.62.2",
+    "rimraf": "3.0.2",
+    "typescript": "3.8.3"
+  }
+}
