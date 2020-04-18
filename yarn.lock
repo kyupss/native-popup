@@ -940,7 +940,7 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
-"@kyupss/native-popup@^1.0.2":
+"@kyupss/native-popup@1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@kyupss/native-popup/-/native-popup-1.0.2.tgz#4da2ef1845f6da160874860ba9e5b366265ba5f3"
   integrity sha512-ZqCLWLhbnj+onWx2t2wTXHNrCXB1KJFwYUca2DKG6meS/bzcPo5WnA6wK3XYwU4slYlWidqZAXkqb3I8+BiDEA==
@@ -5380,7 +5380,7 @@ stacktrace-parser@^0.1.3:
   dependencies:
     type-fest "^0.7.1"
 
-standard-version@^7.1.0:
+standard-version@7.1.0:
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/standard-version/-/standard-version-7.1.0.tgz#021dd79eac749548677c876d5a94791df50f1f36"
   integrity sha512-bHY2E/1tYGeVl+0XSXFivb+54h2fA4pWJocXAd6FGbtSFUvGsnfmMbIXYDxrYErpq7oEqoKreV8xTAp78WoATA==
