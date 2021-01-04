@@ -66,7 +66,7 @@ Simply declare the method in your event `Popup.show({...})` in its component.
 You can also use the `Toast` component.
 
 ```jsx
-// Is necessary make the import to Toast (import { Root, Toast } from 'popup-ui')
+// Is necessary make the import to Toast (import { Root, Toast } from '@kyupss/native-popup')
 <Root>
   <View>
     <TouchableOpacity
