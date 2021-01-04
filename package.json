@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "tsc -p tsconfig.json && copyfiles ./src/assets/*.png ./dist/assets",
+    "build": "tsc -p tsconfig.json && copyfiles -u 2 ./src/assets/*.png dist/assets",
     "release": "standard-version",
     "patch": "npm run release -- --release-as patch",
     "minor": "npm run release -- --release-as minor",

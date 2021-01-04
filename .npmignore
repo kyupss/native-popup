@@ -6,28 +6,19 @@ npm-debug.log
 node_modules
 
 # Examples (If applicable to your project)
-sample
+./samples
 
 # source
-lib
-tests
-sample
-index.ts
-package-lock.json
-yarn.lock
-tsconfig.json
-.prettierrc
-docs
-website
+./assets
+./src
 
 # misc
-.commitlintrc.json
-.release-it.json
-.eslintignore
-.eslintrc.js
-renovate.json
-.prettierignore
-.prettierrc
-publish.sh
-assets
+.babelrc
+.editorconfig
+.gitignore
+CHANGELOG.md
 README.md
+package.json
+renovate.json
+tsconfig.json
+yarn.lock
