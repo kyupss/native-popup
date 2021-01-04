@@ -1,138 +1,159 @@
-import React, { Component } from 'react'
-import { View, Animated, Text, StyleSheet, Image, Dimensions } from 'react-native'
+import React, { useState } from "react";
+import {
+    View,
+    Animated,
+    Text,
+    StyleSheet,
+    Image,
+    Dimensions
+} from "react-native";
 
-const { height } = Dimensions.get('screen')
+const { height } = Dimensions.get("screen");
 
-class Toast extends Component {
-    static toastInstance
+const Toast = () => {
+    const [data, setData] = useState({});
+    const [toast, setToast] = useState(new Animated.Value(height));
 
-    static show({ ...config }) {
-		this.toastInstance.start(config)
-    }
-    
-    static hide() {
-		this.toastInstance.hideToast()
-    }
-    
-    state = {
-        toast: new Animated.Value(height)
-    }
+    Toast.show = ({ ...config }) => {
+        start(config);
+    };
 
-    start({ ...config }){
-        this.setState({
+    Toast.hide = () => {
+        hideToast();
+    };
+
+    const start = ({ ...config }) => {
+        setData({
             title: config.title,
             text: config.text,
             color: config.color,
             icon: config.icon,
-            timing: config.timing
-        })
+            timing: config.timing,
+            position: config.position
+        });
 
-        Animated.spring(this.state.toast, {
-            toValue: height - 130,
+        let position
+        if(config.position === 'center'){
+            position = height / 3
+        }else if(config.position === 'top'){
+            position = height / 12
+        }else {
+            position = height / 1.2
+        }
+        Animated.spring(toast, {
+            toValue: position,
             bounciness: 15,
             useNativeDriver: true
-        }).start()
+        }).start();
 
-        const duration = config.timing > 0 ? config.timing : 5000
+        const duration = config.timing > 0 ? config.timing : 5000;
 
         setTimeout(() => {
-            this.hideToast()
-        }, duration)
-    }
+            hideToast();
+        }, duration);
+    };
 
-    hideToast(){
-        Animated.timing(this.state.toast, {
+    const hideToast = () => {
+        Animated.timing(toast, {
             toValue: height,
             duration: 300,
             useNativeDriver: true
-        }).start()
-    }
+        }).start();
+    };
 
-    render(){
-        const { title, text, icon, color } = this.state
-        return(
-            <Animated.View 
-                ref={c => this._root = c}
-                style={[styles.toast, {
-                    transform: [
-                        { translateY: this.state.toast }
-                    ]
-                }]}
+    const { title, text, icon, color } = data;
+    return (
+        <Animated.View
+            style={[
+                styles.toast,
+                {
+                    transform: [{ translateY: toast }]
+                }
+            ]}
+        >
+            <View
+                style={[
+                    styles.timing,
+                    { backgroundColor: color || "transparent" }
+                ]}
+            />
+            <View style={styles.content}>
+                <Text style={[styles.title, { color }]}>{title}</Text>
+                <Text style={styles.subtitle}>{text}</Text>
+            </View>
+
+            <View
+                style={[
+                    styles.iconStatus,
+                    { backgroundColor: color || "transparent" }
+                ]}
             >
-                <View style={[styles.timing, { backgroundColor: color || 'transparent' }]} />
-                <View style={styles.content}>
-                    <Text style={[styles.title, { color }]}>{ title }</Text>
-                    <Text style={styles.subtitle}>{ text }</Text>
-                </View>
-
-                <View style={[styles.iconStatus, { backgroundColor: color || 'transparent' }]}>
-                    { icon }
-                </View>
-            </Animated.View>
-        )
-    }
-}
+                {icon}
+            </View>
+        </Animated.View>
+    );
+};
 
 const styles = StyleSheet.create({
     toast: {
-        position: 'absolute',
-        width: '80%',
-        alignSelf: 'center',
-        backgroundColor: '#fff',
+        position: "absolute",
+        width: "80%",
+        alignSelf: "center",
+        backgroundColor: "#fff",
         borderRadius: 10,
         minHeight: 90,
         shadowColor: "#ccc",
         borderWidth: 1,
-        borderColor: '#f5f5f5',
-        alignItems: 'center',
+        borderColor: "#f5f5f5",
+        alignItems: "center",
         shadowOffset: {
             width: 0,
-            height: 2,
+            height: 2
         },
         shadowOpacity: 0.25,
         shadowRadius: 3.84,
         elevation: 5,
-        flexDirection: 'row'
+        flexDirection: "row"
     },
     timing: {
         borderTopLeftRadius: 10,
         borderTopRightRadius: 10,
         height: 2,
-        width: '100%',
-        backgroundColor: '#f1f1f1',
-        position: 'absolute',
+        width: "100%",
+        backgroundColor: "#f1f1f1",
+        position: "absolute",
         top: 0
-    },  
+    },
     content: {
-        width: '90%',
+        width: "90%",
         paddingLeft: 20,
         paddingRight: 20
-    },  
+    },
     title: {
-        color: '#f1f1f1',
-        fontWeight: '600',
+        color: "#f1f1f1",
+        fontWeight: "600",
         fontSize: 16
     },
     subtitle: {
         marginTop: 5,
-        fontWeight: '300',
+        fontWeight: "300",
         fontSize: 13
     },
     img: {
-        resizeMode: 'contain',
+        resizeMode: "contain",
         width: 20,
         height: 20
     },
     iconStatus: {
         width: 40,
         height: 40,
-        backgroundColor: '#f1f1f1',
+        backgroundColor: "#f1f1f1",
         borderRadius: 50,
-        position: 'absolute',
+        position: "absolute",
         right: -20,
-        justifyContent: 'center',
-        alignItems: 'center'
+        justifyContent: "center",
+        alignItems: "center"
     }
-})
+});
 
-export default Toast
+export default Toast;
