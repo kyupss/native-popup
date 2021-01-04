@@ -1,25 +1,21 @@
-import React from 'react'
-import { View, ViewPropTypes } from 'react-native'
-import PropTypes from 'prop-types'
+import React from 'react';
+import { View, ViewPropTypes } from 'react-native';
+import PropTypes from 'prop-types';
 
-import Popup from '../Popup'
-import Toast from '../Toast'
+import Popup from '../Popup';
+import Toast from '../Toast';
 
-
-const Root =(props)=> {
-    return (
-      <View 
-        style={{ flex: 1 }}
-      >
-        {props.children}
-        <Popup
-        />
-        
-        <Toast 
-        />
-      </View>
-    )
-  }
+const Root = props => {
+  return (
+    <View 
+      style={{ flex: 1 }}
+    >
+      { props.children }
+      <Popup />
+      <Toast />
+    </View>
+  );
+};
 
 Root.propTypes = {
   ...ViewPropTypes,
@@ -28,6 +24,6 @@ Root.propTypes = {
     PropTypes.number,
     PropTypes.array
   ])
-}
+};
 
-export default Root
+export default Root;

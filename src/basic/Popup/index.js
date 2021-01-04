@@ -65,7 +65,7 @@ const Popup = () => {
 			setTimeout(() => {
 				hidePopup();
 			}, duration);
-		}
+		};
 	};
 
 	const hidePopup = () => {
