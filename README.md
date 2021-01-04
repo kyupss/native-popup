@@ -74,7 +74,8 @@ You can also use the `Toast` component.
         Toast.show({
         title: 'User created',
         text: 'Your user was successfully created, use the app now.',
-        color: '#2ecc71'
+        color: '#2ecc71',
+        position: 'top' // bottom, center, top
       })}
     >
     <Text>Call Toast</Text>
@@ -162,6 +163,7 @@ Popup.show({
 | color      | Defines the color to title, border and iconC    | #e1e1e1            | String    |
 | timing     | Define your timing to close toast               | 6s                 | Int       |
 | icon       | Choose your the best icon to toast              |                    | Component |
+| position   | Choose position on your screen                  | bottom             | String    |
 
 ## Contributing
 
