@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.1](https://github.com/kyupss/native-popup/compare/v1.0.3...v2.0.1) (2021-01-04)
+
+
+### Features
+
+* refactoring of class components to functional components, add new option in Toast to put the position where it appears ([9df1eb3](https://github.com/kyupss/native-popup/commit/9df1eb30edbabd56a9b6fc072dbfecb10ec9a824))
+
+
+### Bug Fixes
+
+* delete circular dependency ([0e37e04](https://github.com/kyupss/native-popup/commit/0e37e0426932150756e7deb0c522026ecefc8f76))
+* fix image error when transpiling ([56ff94f](https://github.com/kyupss/native-popup/commit/56ff94f54317d28c90b82fe356878acb5d1a4d1a))
+* **deps:** pin dependencies ([8683a1b](https://github.com/kyupss/native-popup/commit/8683a1bf0ff670a906f78782398948ad4de1445e))
+
 ## [2.0.0](https://github.com/kyupss/native-popup/compare/v1.0.4...v2.0.0) (2021-01-04)
 
 
