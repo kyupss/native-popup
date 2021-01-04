@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/kyupss/native-popup/compare/v1.0.4...v2.0.0) (2021-01-04)
+
+
+### Features
+
+* refactoring of class components to functional components, add new option in Toast to put the position where it appears ([9df1eb3](https://github.com/kyupss/native-popup/commit/9df1eb30edbabd56a9b6fc072dbfecb10ec9a824))
+
 ### [1.0.4](https://github.com/kyupss/native-popup/compare/v1.0.3...v1.0.4) (2020-12-22)
 
 
