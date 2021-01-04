@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "tsc -p tsconfig.json",
+    "build": "tsc -p tsconfig.json && copyfiles ./src/assets/*.png ./dist/assets",
     "release": "standard-version",
     "patch": "npm run release -- --release-as patch",
     "minor": "npm run release -- --release-as minor",
@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
+    "copyfiles": "^2.4.1",
     "react": "17.0.1",
     "react-native": "0.63.4",
     "rimraf": "3.0.2",
